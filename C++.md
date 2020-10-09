@@ -1,0 +1,85 @@
+- Reading list
+  - **C++ fundamental concepts to cover:**
+    - Fundamental data types (int/uint, long/ulong, float, double, char, bool, etc.)
+    - Arrays (one and 2-dimensional)
+    - Constants (_const_)
+    - Enums
+    - Pointers and References (differences and alikes)
+    - Functions (passing arguments by value/pointer/reference, local variables, function overloading)
+    - Classes
+      - Types of class members (data, constructors/destructors, methods)
+      - Access specifiers (public/private/const)
+      - Constant data members ( **const** )
+      - Types of constructors (implicit vs. explicit constructors)
+      - Class instantiation (operators **new** and **delete** )
+      - Static vs. non-static members
+      - Inheritance
+      - Method overloading
+      - **Virtual** and **pure virtual** functions
+      - Operator overloading (at least &#39;=&#39;, &#39;==&#39; and &#39;[]&#39;)
+      - Shallow vs. deep copy
+      - Iterators
+      - Templates
+      - Streams (std::cin/ std::cout, std::ifstream/ std::ofstream, std::stringstream)
+    - Namespaces
+    - **typedef** operator
+    - Strings
+      - char[], char\*, std::string
+      - conversions from std::string to number and back (see **std::to\_string()** function from C++ 11, **std::stoi** , **std::stol** , etc.)
+      - string splitting (tokenization) based on some separators
+      - conversion of data from std::string to char\* and back (see the **std::string::c\_str()** function)
+    - Core Data Structures (vector, list, stack, queue, ordered/unordered map and ordered/unordered set)
+      - Learn to implement them from scratch (at least the basic ones)
+      - Use some data structures from std library ( **std::list** , **std::stack** , **std::queue** , **std::map** / **std::unordered\_map** , **std::set/std::unordered\_set** )
+    - Operations with files
+      - Checking if a file exists on the disk
+      - Creation of a new file
+      - Opening an existing file for writing/reading/appending
+      - Reading a file line by line
+  - **Tutorial Learncpp** : [http://www.learncp.com/](http://www.learncp.com/)
+    - **Recommended chapters** (they cover many of the topics from the above section) **:**
+      - Chapter 0 – Introduction
+      - Chapter 1 – C++ Basics
+      - Chapter 2 – Variables and Fundamental Data Types
+      - Chapter 4 – Variable Scope and More Types
+      - Chapter 6 – Arrays, Strings, Pointers, and References
+      - Chapter 7 – Functions
+      - Chapter 8 – Basic object-oriented programming
+      - Chapter 9 – Operator overloading
+
+      - 9.1 – Introduction
+      - 9.8 – Overloading the subscript operator
+      - 9.11 – The copy constructor
+      - 9.12 – Copy initialization
+      - 9.13 – Converting constructors, explicit, and delete
+      - 9.14 – Overloading the assignment operator
+      - 9.15 – Shallow vs. deep copying
+
+    - Chapter 11 – Inheritance
+    - Chapter 12 – Virtual Functions
+    - Chapter 13 – Templates (13.1 – 13.6)
+    - Chapter 17 – std::string
+    - Chapter 18 – Input and output (I/O)
+- **C++ Core Data Structures** : [http://www.sourcetricks.com/p/data-structures-using-c.html](http://www.sourcetricks.com/p/data-structures-using-c.html)
+  - **Recommended sections:**
+    - C++ Singly Linked Lists
+    - C++ Stacks
+    - C++ Queues
+  - **API/Examples from the standard library:**
+    - Vector: [http://en.cppreference.com/w/cpp/container/vector](http://en.cppreference.com/w/cpp/container/vector)
+    - Listă: [http://en.cppreference.com/w/cpp/container/list](http://en.cppreference.com/w/cpp/container/list)
+    - Stivă: [http://en.cppreference.com/w/cpp/container/stack](http://en.cppreference.com/w/cpp/container/stack)
+    - Coadă: [http://en.cppreference.com/w/cpp/container/queue](http://en.cppreference.com/w/cpp/container/queue)
+    - Map: [http://en.cppreference.com/w/cpp/container/map](http://en.cppreference.com/w/cpp/container/map)
+    - Unordered map: [https://en.cppreference.com/w/cpp/container/unordered\_map](https://en.cppreference.com/w/cpp/container/unordered_map)
+    - Set: [https://en.cppreference.com/w/cpp/container/set](https://en.cppreference.com/w/cpp/container/set)
+    - Unordered Set: [https://en.cppreference.com/w/cpp/container/unordered\_set](https://en.cppreference.com/w/cpp/container/unordered_set)
+- **Some more advanced topics:**
+  - Memory management and smart pointers in C++: [https://en.cppreference.com/w/cpp/memory](https://en.cppreference.com/w/cpp/memory)
+  - Numerical limits in C++: [http://en.cppreference.com/w/cpp/types/numeric\_limits](http://en.cppreference.com/w/cpp/types/numeric_limits)
+  - Standard algorithms in C++: [http://en.cppreference.com/w/cpp/algorithm](http://en.cppreference.com/w/cpp/algorithm)
+- **Resolve some C++ coding challenges** : [https://www.hackerrank.com/domains/cpp/cpp-introduction](https://www.hackerrank.com/domains/cpp/cpp-introduction)
+- **Some very good books on C++ best practices (for curious readers):**
+  - **Effective C++ (Scott Meyers)** –This was written with the aim of being the best second book C++ programmers should read, and it succeeded. Earlier editions were aimed at programmers coming from C, the third edition changes this and targets programmers coming from languages like Java. It presents ~50 easy-to-remember rules of thumb along with their rationale in a very accessible (and enjoyable) style. For C++11 and C++14 the examples and a few issues are outdated and Effective Modern C++ should be preferred. [Review]
+  - **Effective Modern C++ (Scott Meyers)** –This is basically the new version of Effective C++, aimed at C++ programmers making the transition from C++03 to C++11 and C++14.
+  - **Effective STL (Scott Meyers)** –This aims to do the same to the part of the standard library coming from the STL what Effective C++ did to the language as a whole: It presents rules of thumb along with their rationale.
