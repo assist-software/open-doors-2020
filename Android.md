@@ -635,7 +635,3 @@ Type "android" (if it's more related to sintax you can type first "java" or "kot
 Type the component you encountered the problem on: activity, fragment, textfield, image, background, task, etc.
 State the problem: X not working, Y not showing, how to make Z
 Also, don't forget to check the official documentation on https://developer.android.com/
-
-Want to convert another document?
-
-Feedback
