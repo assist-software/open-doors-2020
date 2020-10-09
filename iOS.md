@@ -59,7 +59,7 @@ To build a screen in your app you use a custom subclass of [UIViewController](ht
 - _content view controllers_ – they own all of their views and manage the data for them. Most view controllers are part from this type.
 - _container view controllers_ – they do not own all of their views, some are managed by other controllers, also known as child view controllers.
 
-Fig. 1 – Container View Controller
+![alt text](https://github.com/assist-software/open-doors-2020/raw/master/resources/ContainerViewController.png "Fig. 1 – Container View Controller")
 
 In fig. 1 there is a container view controller acting as a _root view controller_. The container has the role of positioning its children side by side and manage their presentation.
 
