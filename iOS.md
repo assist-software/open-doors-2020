@@ -6,8 +6,7 @@
 ## iOS: Swift Basics
 
 Swift is the official programming language for macOS, iOS, watchOS and tvOS developed by Apple.
-
-- Documentation:
+### Documentation:
 
 - [Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 - [Basic Operators](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html)
@@ -60,8 +59,6 @@ To build a screen in your app you use a custom subclass of [UIViewController](ht
 - _content view controllers_ – they own all of their views and manage the data for them. Most view controllers are part from this type.
 - _container view controllers_ – they do not own all of their views, some are managed by other controllers, also known as child view controllers.
 
-![](RackMultipart20201009-4-1iw46lw_html_efb1c060d594aae3.png)
-
 Fig. 1 – Container View Controller
 
 In fig. 1 there is a container view controller acting as a _root view controller_. The container has the role of positioning its children side by side and manage their presentation.
@@ -72,74 +69,51 @@ The methods of displaying or switching view controllers are:
 
 - Segue – you drag the connections between view controllers from the design view.
 - Present (programmatically)
+```
+if let vc = UIStoryboard(name: "Main", bundle: nil).
+instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
+{
+present(vc, animated: true, completion: nil)
+}
+•	Push (programmatically)
 
-_if let vc = UIStoryboard(name: &quot;Main&quot;, bundle: nil)._
+if let viewController = UIStoryboard(name: "Details", bundle: nil).
+instantiateViewController(withIdentifier: "DetailsVC") as? DetailsVC {
+  if let navigator = navigationController {
+navigator.pushViewController(viewController, animated: true)
+}}
 
-_instantiateViewController(withIdentifier: &quot;LoginVC&quot;) as? LoginVC_
-
-_{_
-
-_present(vc, animated: true, completion: nil)_
-
-_}_
-
-- Push (programmatically)
-
-_if let viewController = UIStoryboard(name: &quot;Details&quot;, bundle: nil)._
-
-_instantiateViewController(withIdentifier: &quot;DetailsVC&quot;) as? DetailsVC {_
-
-_if let navigator = navigationController {_
-
-_navigator.pushViewController(viewController, animated: true)_
-
-_}}_
-
+```
 ## iOS: Data storage
 
 ### NSCoding
 
 The most basic method to persist data in iOS is using [NSCoding](https://developer.apple.com/documentation/foundation/nscoding). This method is working by assigning a particular key to each property from the model. These keys will be used to search and load specific objects. The model class needs to conform to NSCoding protocol and subclass NSObject. For example:
+```
+final class User: NSObject, NSCoding {
+	var id: Int
+	var name: String
+	var email String	
 
-_final class User: NSObject, NSCoding {_
+	init(id: Int, name: String, email: String) {
+	this.id = id
+	this.name = name
+this.email = email
+}
+fun encode(with aCoder: NSCoder) {
+	aCoder.encode(id, forKey: „id”)
+	aCoder.encode(name, forKey: „name”)
+	aCoder.encode(email, forKey: „email”)
+}
 
-_var id: Int_
+init?(coder aDecoder: NSCoder) {
+id = aDecoder.decodeInteger(forKey: „id”)
+name = aDecoder.decodeObject(forKey: „name”) as! String
+email = aDecoder.decodeObject(forKey: „email”) as! String
+}
+}
 
-_var name: String_
-
-_var email String_
-
-_init(id: Int, name: String, email: String) {_
-
-_this.id = id_
-
-_this.name = name_
-
-_this.email = email_
-
-_}_
-
-_fun encode(with aCoder: NSCoder) {_
-
-_aCoder.encode(id, forKey: „id&quot;)_
-
-_aCoder.encode(name, forKey: „name&quot;)_
-
-_aCoder.encode(email, forKey: „email&quot;)_
-
-_}_
-
-_init?(coder aDecoder: NSCoder) {_
-
-_id = aDecoder.decodeInteger(forKey: „id&quot;)_
-
-_name = aDecoder.decodeObject(forKey: „name&quot;) as! String_
-
-_email = aDecoder.decodeObject(forKey: „email&quot;) as! String_
-
-_}_
-
-_}_
+```
 
 ### Keychain Services
 
@@ -158,16 +132,16 @@ Multithreading allows the processor to create concurrent threads it can switch b
 One of the methods that handles background tasks in the iOS framework is [DispatchQueue](https://developer.apple.com/documentation/dispatch/dispatchqueue), that can execute tasks on another thread in two ways:
 
 - Serial (synchronous) – blocks the calling thread and waits for the previous task to finish execution before starting the next one
-
-_let queue = DispatchQueue(label: „someLabel&quot;)_
-
-_queue.async { doSomeWork() }_
-
+```
+let queue = DispatchQueue(label: „someLabel”)
+queue.async { doSomeWork() }
+```
 - Concurent (asynchronous) – doesn&#39;t&#39; t block the calling thread executing the tasks simultaneously
 
-_let queue = DispatchQueue(label: „someLabel&quot;, qos: .default, attributes: .concurrent)_
-
-_queue.async { doSomeWork() }_
+```
+let queue = DispatchQueue(label: „someLabel”, qos: .default, attributes: .concurrent)
+queue.async { doSomeWork() }
+```
 
 ### RxSwift (For advanced)
 
